@@ -101,4 +101,7 @@ $(document).ready(function(){
             beforeShowDay: disableDates
         }   
     );
+        
+    $("input").tooltip({container:'body'});
 });
+

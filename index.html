@@ -17,15 +17,14 @@
     <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>        
 
     <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
     <!-- which is built on top of JQuery and offers additional possibilities -->
     <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
-    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   
     <!-- Your own script -->
     <script src="scripts/service.js"></script>
@@ -186,7 +185,7 @@
             <div id="collapsePaymentInfo" class="collapse" data-parent="#accordion">
               <div class="card-body">
 		<p>Please enter a valid credit card number</p>
-		<input placeholder="XXXX XXXX XXXX XXXX" type="text" id="credit">
+		<input placeholder="XXXX XXXX XXXX XXXX" type="text" id="credit" title="We are currently requiring payment information ahead of time to minimize contact. Your card will not be charged until the repairs are completed." data-toggle="tooltip" data-placement="top">
               </div>
             </div>
           </div>
