@@ -1,0 +1,218 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- The head should contain an appropriate title for your site -->
+  <head>
+    <title>Colonel By Bike Repair</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>        
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  </head>
+
+
+  <body>
+
+    <!-- Using the collapsible Navbar, so we see the hamburger menu icon -->
+    <!-- It really has become a standard. -->
+    <!-- As your page is a vertical page (Module 4 requirement), you mus use the navbar -->
+    <!-- to just jump to parts of the page. What I put as First/Second/Third here would -->
+    <!-- be sections in your page. -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+	<ul class="navbar-nav">
+	  <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+	  </li> 
+	  <li class="nav-item">
+            <a class="nav-link" href="#appointments">Book an Appointment</a>
+	  </li>
+	  <li class="nav-item">
+            <a class="nav-link" href="#location">Our Location</a>
+	  </li>   
+	</ul>
+      </div>  
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1>Welcome to Colonel By Bike Repair <i class="fas fa-bicycle"></i></h1>
+        <p>Most trusted repair shop of Ottawa</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-danger alert-dismissible">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	<img src="https://img.icons8.com/flat_round/64/000000/protection-mask.png" width="30" height="30"/><strong>      Due to the COVID-19 pandemic, all services are by appointment only!</strong>
+      </div>
+    </div>
+
+    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+    <!-- Might be (or not) useful to show some information to the user -->
+    <div class="container p-3" id="services">
+      <h2>Services</h2>
+      <table class="table table-primary table-hover">
+        <tbody>
+          <tr>
+            <td>Tune-Up</td>
+            <td>$40</td>
+          </tr>
+          <tr>
+            <td>Pro Tune-Up</td>
+            <td>$60</td>
+          </tr>
+          <tr>
+            <td>Tire Change</td>
+            <td>$15</td>
+          </tr>
+          <tr>
+            <td>Repairs</td>
+            <td>$30/hour + Parts</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container p-3" id="appointments">
+      <h2>Book an Appointment</h2>
+      <div id="accordion" class="pb-3">
+	<div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseService"><img src="https://img.icons8.com/windows/32/000000/tricycle.png" width="25" height="25"/>  Choose a service</a>
+          </div>
+          <div id="collapseService" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+	      <div class="form-group">
+		<label for="exampleFormControlSelect2">Select one or more services to be performed</label>
+		<select multiple class="form-control" id="exampleFormControlSelect2">
+		  <option>Tune-Up</option>
+		  <option>Pro Tune-Up</option>
+		  <option>Tire Change</option>
+		  <option>Repairs</option>
+		</select>
+	      </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo"><img src="https://img.icons8.com/cotton/64/000000/person-male--v2.png" width="30" height="30"/>  Your info</a>
+            </div>
+            <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+		<p>Your information so we can contact you</p>
+		<p>Form to enter name, email, phone</p>
+		<div class="form-group">
+		  <label for="exampleFormControlInput1">Name</label>
+		  <input class="form-control" id="name">
+		</div>
+		<div class="form-group">
+		  <label for="exampleFormControlInput1">Email address</label>
+		  <input type="email" class="form-control" id="email" placeholder="name@example.com">
+		</div>
+		<div class="form-group">
+		  <label for="exampleFormControlInput1">Phone number</label>
+		  <input type="email" class="form-control" id="phone" placeholder="XXX-XXX-XXXX">
+		</div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#collapseChooseMechanic"><img src="https://img.icons8.com/wired/64/000000/wrench.png" width="30" height="30"/>  Choose a Mechanic</a>
+            </div>
+            <div id="collapseChooseMechanic" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+		<label for="exampleFormControlSelect1">Select your preferred mechanic</label>
+		<select class="form-control" id="mechanic">
+		  <option value="any">Any Available</option>
+		  <option value="steve">Steve (Unavailable on Mondays and Tuesdays)</option>
+		  <option value="john">John (Unavailable on Wednesdays and Thursdays)</option>
+		  <option value="kayla">Kayla (Unavailable on Fridays and Saturdays)</option>
+		</select>
+	      </div>
+            </div>
+          </div>
+	  <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate"><img src="https://img.icons8.com/android/24/000000/calendar.png" width="30" height="30"/>  Choose a date</a>
+            </div>
+            <div id="collapseDate" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+		<p>What date?</p>
+		<!-- Bootstrap has various input components. Some examples are given here: -->
+		<!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+		<div class="form-group row">
+                  <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
+                  <div class="col-10">
+		    <input type="text" id="dateInput">
+                  </div>
+		</div>
+              </div>
+            </div>
+          </div>
+	  <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#collapsePaymentInfo"><img src="https://img.icons8.com/ios-glyphs/30/000000/insert-credit-card.png" width="30" height="30"/>  Payment Info</a>
+            </div>
+            <div id="collapsePaymentInfo" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+		<p>Please enter a valid credit card number</p>
+		<input placeholder="XXXX XXXX XXXX XXXX" type="text" id="credit">
+              </div>
+            </div>
+          </div>
+	</div>
+      </div>
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div>
+    
+    <div class="container p-3" id="location">
+      <h2>Our Location</h2>
+      <div class="card" style="width: 18rem;">
+	<img class="card-img-top" src="./images/map.png" alt="522 Colonel By Drive">
+	<div class="card-body">
+	  <h5 class="card-title">522 Colonel By Drive</h5>
+	  <p class="card-text">Currently open for curbside dropoff and pickup:</p>
+	  <ul class="list-group">
+	    <li class="list-group-item">Monday: 8am to 8pm</li>
+	    <li class="list-group-item">Tuesday: 8am to 8pm</li>
+	    <li class="list-group-item">Wednesday: 8am to 8pm</li>
+	    <li class="list-group-item">Thursday: 8am to 8pm</li>
+	    <li class="list-group-item">Friday: 8am to 8pm</li>
+	    <li class="list-group-item">Saturday: 9am to 5pm</li>
+	    <li class="list-group-item">Sunday: Closed</li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
